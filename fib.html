@@ -13,39 +13,78 @@
     <link rel="stylesheet" href="">
   </head>
   <body>
-    <h1>Fizzbuzz</h1>
+    <h1>fib()</h1>
     <p>
       prompt: <br><br>
       In mathematics fibonacci numbers are the numbers in the following integer sequence, 
       and characterized by the fact that every number after the first two is the sum 
       of the two preceding ones.<br>
       0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55<br>
-      The nth term is the (n - 1) term plus the (n - 2) term.
+      <br>
+      The nth term is the (n - 1) term plus the (n - 2) term.<br>
 
 
       <br><br>
 
       Summary:
       <br><br>
-      Find n by adding up the two numbers before it (starting at 0).
+      recursively find n by adding up the two numbers before it.
       <br><br>
-      Outline:  
-      <br><br> 
-      outline...
+  
+      Outline:
+      <br><br>
+      // establish the base cases fib(0) and fib(1)<br>
+      If n === 0:<br>
+      &nbsp;return 0;<br>
+      Else if n === 1:<br>
+      &nbsp;return 1;<br>
+      // recursively call fib()<br>
+    Else <br>
+    &nbsp;return fib(n - 1) + fib(n - 2).<br>
+
+    <br>
+    Use: run fib() in the console. Example fib(2) returns 1. fib(3) returns 2.
     </p>
     
     <script>
     /*
-      Summary:
-    
+      Summary:  Find n by adding up the two numbers before it.
+      
+      Note: 
+      The Rule is n = n−1 + n−2
+
+      where:
+      n is term number "n"
+      n−1 is the previous term (n−1)
+      n−2 is the term before that (n−2)
+      
+      start at 0, 
+      fib(0) returns 0
+      fib(1) returns 1
+      fib(2) returns 1 
 
       Outline:
       
-    
-
+      // establish the base cases fib(0) and fib(1)
+      If n === 0:
+        return 0;
+      Else if n === 1:
+        return 1;
+      // If n is greater than 1, recursively call fib(n) " n = n−1 + n−2 "
+      Else return fib(n - 1) + fib(n - 2).
 
     */
-    
+
+    function fib(n) {
+      if ( n === 0) {
+        return 0;
+      } else if (n === 1){
+        return 1;
+      } else {
+         return fib(n - 1) + fib(n - 2);
+      }
+  
+    }
 
       
     </script>
