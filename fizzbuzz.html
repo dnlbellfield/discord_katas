@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <h1>Fizzbuzz</h1>
+    <p>
+      prompt: <br><br>
+      Write a program that prints the numbers from 1 to 100. 
+      But for multiples of three print “Fizz” instead of the number and 
+      for the multiples of five print “Buzz”. For numbers which are 
+      multiples of both three and five print “FizzBuzz” function should 
+      be available in the console. <br>
+      <br>
+      Summary:
+      <br><br>
+      Use modulo % to identify multiples 3 and 5.
+      <br><br>
+      Outline:  
+      <br><br> 
+      For each number from 1 to 100: <br>
+      &nbsp;&nbsp;// Identify if the current integer is a multiple of 3,5, or 3 and 5.  <br>
+      &nbsp;&nbsp;  if current integer is a mulitple of both 3 and 5: <br>
+      &nbsp;&nbsp;&nbsp; log 'FizzBuzz' <br>
+      &nbsp; else if current integer is a multiple of 3: <br>
+      &nbsp;&nbsp;&nbsp; log "Fizz" <br>
+      &nbsp;  else if current integer is a multiple of 5: <br>
+      &nbsp;&nbsp;&nbsp; log "Buzz" <br>
+      &nbsp;  else: <br>
+      &nbsp;&nbsp; log current integer <br>
+    </p>
+    
+    <script>
+    /*
+      Summary:
+      Use modulo % to identify multiples 3 and 5.
+
+      Outline:
+      
+      For each number from 1 to 100:
+        Identify if the current integer is a multiple of 3,5, or 3 and 5:
+        if a mulitple of both 3 and 5:
+          // log 'FizzBuzz'
+        else if current integer is a multiple of 3:
+          // log "Fizz"
+        else if current integer is a multiple of 5:
+          // log "Buzz"
+        else:
+          // current integer
+
+
+    */
+    
+    (function fizzBuzz() {
+      for (var i = 1; i <= 100; i ++) {
+        var currentInteger = i;
+        if (currentInteger % 3 === 0 && currentInteger % 5 === 0) {
+          console.log("FizzBuzz");
+        } else if (currentInteger % 3 === 0) {
+          console.log("Fizz");
+        } else if (currentInteger % 5 === 0) {
+          console.log("Buzz");
+        } else {
+          console.log(i);
+        }
+      }
+    })();
+      
+    </script>
+  </body>
+</html>
